@@ -56,9 +56,9 @@ class Game
 		end
 
 		def draw?
-      		return (not @game_board.board.values.include?(" ")) && (not @player1.win?) && (not @player2.win?)
-    	end
-
+			return (not @game_board.board.values.include?(" ")) && (not @player1.win?) && (not @player2.win?)
+		end
+		
 		def get_turn(player, player_name)
 			move = get_move(player, player_name)	#get user input and validate move
 			player.make_move(@game_board, move)
@@ -134,6 +134,7 @@ class Board
 	end
 
 end
+
 
 Game.new.start
 print "Replay (Y/N)?: "
