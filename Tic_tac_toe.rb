@@ -36,9 +36,9 @@ class Game
 			puts "---------------------------------------------------"
 			puts "Welcome to Tic Tac Toe!"
 			print "Player 1, please enter your name: "
-			@name1 = gets.chomp
+			@name1 = gets.chomp.capitalize
 			print "Player 2, please enter your name: "
-			@name2 = gets.chomp
+			@name2 = gets.chomp.capitalize
 			puts "---------------------------------------------------"
 
 			puts "Here's the game board"
@@ -49,8 +49,7 @@ class Game
 			puts "|-|-|-|"
 			puts "|7|8|9|"
 			puts "-------"
-			puts "The player who succeeds in placing three respective marks \
-					in a horizontal, vertical, or diagonal row wins the game."
+			puts "The player who succeeds in placing three respective marks\nin a horizontal, vertical, or diagonal row wins the game."
 			puts "---------------------------------------------------"	
 			puts
 		end
@@ -80,11 +79,9 @@ end
 
 
 class Player
-	attr_accessor :symbol, :player_move
+	attr_accessor :symbol, :player_moves	#getter and setter
 
-	@@win_condition = [ [1,2,3], [4,5,6], [7,8,9],
-						[1,4,7], [2,5,8], [3,6,9],
-						[1,5,9], [3,5,7] ]
+	@@win_condition = [ [1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9], [1,5,9], [3,5,7] ]
 
 	def initialize(symbol)
 		@symbol = symbol
